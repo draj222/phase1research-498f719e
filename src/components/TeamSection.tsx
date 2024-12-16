@@ -63,7 +63,7 @@ const TeamSection = () => {
           </motion.h2>
           <div className="w-20 h-1 bg-[#335c84] mx-auto mb-12"></div>
           
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-5xl mx-auto relative">
             <Carousel
               opts={{
                 align: "start",
@@ -94,10 +94,10 @@ const TeamSection = () => {
                 ))}
               </CarouselContent>
               <div className="hidden md:block">
-                <CarouselPrevious className="left-0 h-12 w-12 rounded-full bg-[#1EAEDB] hover:bg-[#0FA0CE] text-white border-none">
+                <CarouselPrevious className="-left-4 h-12 w-12 rounded-full bg-[#1EAEDB] hover:bg-[#0FA0CE] text-white border-none">
                   <ArrowLeft className="h-6 w-6" />
                 </CarouselPrevious>
-                <CarouselNext className="right-0 h-12 w-12 rounded-full bg-[#1EAEDB] hover:bg-[#0FA0CE] text-white border-none">
+                <CarouselNext className="-right-4 h-12 w-12 rounded-full bg-[#1EAEDB] hover:bg-[#0FA0CE] text-white border-none">
                   <ArrowRight className="h-6 w-6" />
                 </CarouselNext>
               </div>
