@@ -29,7 +29,7 @@ const ContactUs = () => {
               <Mail className="w-8 h-8 text-white" />
             </div>
             <h3 className="text-xl font-semibold mb-3 text-white">Email</h3>
-            <p className="text-white/80">info@phase1research.org</p>
+            <p className="text-white/80">contact.phase1@p1research.org</p>
           </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -42,7 +42,7 @@ const ContactUs = () => {
               <Phone className="w-8 h-8 text-white" />
             </div>
             <h3 className="text-xl font-semibold mb-3 text-white">Phone</h3>
-            <p className="text-white/80">(123) 456-7890</p>
+            <p className="text-white/80">(925) 404-9856</p>
           </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -55,7 +55,7 @@ const ContactUs = () => {
               <MapPin className="w-8 h-8 text-white" />
             </div>
             <h3 className="text-xl font-semibold mb-3 text-white">Location</h3>
-            <p className="text-white/80">San Francisco, CA</p>
+            <p className="text-white/80">Dublin, CA</p>
           </motion.div>
         </div>
       </div>
