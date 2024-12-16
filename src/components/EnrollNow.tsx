@@ -1,6 +1,9 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { GraduationCap, BookOpen, Users } from "lucide-react";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import ApplicationForm from "./ApplicationForm";
 
 const features = [
   {
@@ -21,57 +24,87 @@ const features = [
 ];
 
 const EnrollNow = () => {
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const [webhookUrl, setWebhookUrl] = useState("");
+
   return (
-    <section className="py-20 bg-[#233e5c]">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <motion.h2
+    <>
+      <section className="py-20 bg-[#233e5c]">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="text-3xl md:text-4xl font-bold mb-4 text-white"
+            >
+              Enroll Now
+            </motion.h2>
+            <p className="text-white/80 max-w-2xl mx-auto">
+              Join our research mentorship program and start your journey towards academic excellence.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            {features.map((feature, index) => (
+              <motion.div
+                key={feature.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.2 }}
+                className="p-6 rounded-xl bg-[#3a536d] border border-[#335c84]/20 shadow-sm hover:shadow-md transition-all duration-300"
+              >
+                <div className="mb-4 p-3 inline-block bg-[#335c84]/10 rounded-lg">
+                  {feature.icon}
+                </div>
+                <h3 className="text-xl font-semibold mb-3 text-white">{feature.title}</h3>
+                <p className="text-white/80">{feature.description}</p>
+              </motion.div>
+            ))}
+          </div>
+          <motion.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-3xl md:text-4xl font-bold mb-4 text-white"
+            className="text-center"
           >
-            Enroll Now
-          </motion.h2>
-          <p className="text-white/80 max-w-2xl mx-auto">
-            Join our research mentorship program and start your journey towards academic excellence.
-          </p>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-          {features.map((feature, index) => (
-            <motion.div
-              key={feature.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
-              className="p-6 rounded-xl bg-[#3a536d] border border-[#335c84]/20 shadow-sm hover:shadow-md transition-all duration-300"
+            <Button 
+              size="lg"
+              className="bg-white text-[#233e5c] hover:bg-white/90 font-semibold text-lg px-8 py-6"
+              onClick={() => setIsDialogOpen(true)}
             >
-              <div className="mb-4 p-3 inline-block bg-[#335c84]/10 rounded-lg">
-                {feature.icon}
-              </div>
-              <h3 className="text-xl font-semibold mb-3 text-white">{feature.title}</h3>
-              <p className="text-white/80">{feature.description}</p>
-            </motion.div>
-          ))}
+              Apply Now
+            </Button>
+          </motion.div>
         </div>
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center"
-        >
-          <Button 
-            size="lg"
-            className="bg-white text-[#233e5c] hover:bg-white/90 font-semibold text-lg px-8 py-6"
-          >
-            Apply Now
-          </Button>
-        </motion.div>
-      </div>
-    </section>
+      </section>
+
+      <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
+        <DialogContent className="sm:max-w-[500px]">
+          <DialogHeader>
+            <DialogTitle>Research Mentorship Application</DialogTitle>
+          </DialogHeader>
+          <div className="mt-4">
+            <div className="mb-4">
+              <Label htmlFor="webhookUrl">Zapier Webhook URL</Label>
+              <Input
+                id="webhookUrl"
+                value={webhookUrl}
+                onChange={(e) => setWebhookUrl(e.target.value)}
+                placeholder="Enter your Zapier webhook URL"
+                className="mt-1"
+              />
+            </div>
+            <ApplicationForm 
+              onClose={() => setIsDialogOpen(false)}
+              webhookUrl={webhookUrl}
+            />
+          </div>
+        </DialogContent>
+      </Dialog>
+    </>
   );
 };
 
