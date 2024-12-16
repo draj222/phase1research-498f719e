@@ -23,12 +23,20 @@ const PastEvents = () => {
     }
   ];
 
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
+  const [emblaRef, emblaApi] = useEmblaCarousel({ 
+    loop: true,
+    dragFree: false
+  });
 
   useEffect(() => {
     if (emblaApi) {
       console.log('Setting up carousel interval: 3000ms');
+      
+      // Initialize the carousel
+      emblaApi.reInit();
+      
       const intervalId = setInterval(() => {
+        console.log('Auto-scrolling to next slide');
         emblaApi.scrollNext();
       }, 3000);
 
