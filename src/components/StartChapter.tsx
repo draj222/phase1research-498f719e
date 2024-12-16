@@ -21,6 +21,10 @@ const benefits = [
 ];
 
 const StartChapter = () => {
+  const handleStartChapter = () => {
+    window.open("https://36xf3wlv9l6.typeform.com/to/DLsICzl4", "_blank");
+  };
+
   return (
     <section className="py-20 bg-[#233e5c]">
       <div className="container mx-auto px-4">
@@ -66,6 +70,7 @@ const StartChapter = () => {
           <Button 
             size="lg"
             className="bg-white hover:bg-white/90 text-[#233e5c] font-semibold text-lg px-8 py-6"
+            onClick={handleStartChapter}
           >
             Start Your Chapter
           </Button>
