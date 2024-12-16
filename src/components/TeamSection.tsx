@@ -11,8 +11,8 @@ import { Card, CardContent } from "@/components/ui/card";
 const teamMembers = [
   {
     image: "/lovable-uploads/b129207c-4d82-4ccc-b090-45d04fe75df0.png",
-    name: "Team Member 1",
-    role: "Role to be added"
+    name: "Dheeraj Tallapragada",
+    role: "Co-Founder/CEO"
   },
   {
     image: "/lovable-uploads/13e6ed42-e2fd-4bf5-9975-f61260571b3e.png",
