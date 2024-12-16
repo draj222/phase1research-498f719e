@@ -19,13 +19,13 @@ const Index = () => {
         className="py-20 bg-black"
       >
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-white">Ready to Get Started?</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-white">Ready to Make an Impact?</h2>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-transparent border-2 border-[#335c84] text-[#335c84] hover:bg-[#335c84] hover:text-black transition-all duration-300 px-8 py-3 rounded-lg">
-              Apply as a Student
+              Begin Your Academic Journey
             </button>
             <button className="bg-transparent border-2 border-[#335c84] text-[#335c84] hover:bg-[#335c84] hover:text-black transition-all duration-300 px-8 py-3 rounded-lg">
-              Join as a Mentor
+              Guide the Next Generation
             </button>
           </div>
         </div>
