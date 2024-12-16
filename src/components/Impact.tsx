@@ -2,8 +2,8 @@ import { motion, useMotionValue, useTransform, animate } from "framer-motion";
 import { useEffect, useState } from "react";
 
 const stats = [
-  { number: "500+", label: "Students Mentored" },
-  { number: "200+", label: "Active Mentors" },
+  { number: "10000+", label: "Students Mentored" },
+  { number: "5000+", label: "Active Mentors" },
   { number: "30+", label: "Countries Reached" },
 ];
 
@@ -14,11 +14,13 @@ const Counter = ({ value, className }: { value: string; className?: string }) =>
 
   useEffect(() => {
     const animation = animate(count, baseNumber, {
-      duration: baseNumber > 400 ? 3 : 1.5,
+      duration: baseNumber > 1000 ? 3 : 1.5,
       ease: (t) => {
-        // Custom easing function that slows down near 420
-        if (count.get() > 400) {
-          return t * (1 - Math.pow(t - 1, 4)); // Slower near the end
+        // Custom easing function that slows down near target-500
+        const slowdownThreshold = baseNumber - 500;
+        if (count.get() > slowdownThreshold) {
+          // Dramatically slow down for the last 500 numbers
+          return t * (1 - Math.pow(t - 1, 6)); // Increased power for even slower animation
         }
         return t * t; // Faster at the start
       },
