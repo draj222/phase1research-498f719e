@@ -11,6 +11,8 @@ const Partners = () => {
     { logo: "/lovable-uploads/08c692f6-4d1a-4a35-b177-606b45f6be72.png", name: "Stanford University" },
     { logo: "/lovable-uploads/9d02bc7f-f09c-499b-9719-8b9ec74a2c55.png", name: "San Jose State University" },
     { logo: "/lovable-uploads/57ca222c-004c-4566-8bcd-2e42c18f64ab.png", name: "UC Berkeley" },
+    { logo: "/lovable-uploads/84745562-108f-41bd-8d23-569037d3d00c.png", name: "Altos Labs" },
+    { logo: "/lovable-uploads/aa1b5c6a-29de-4412-aa18-4c1621e78a9b.png", name: "BlackRock" },
   ];
 
   return (
