@@ -8,8 +8,8 @@ import {
 } from "@/components/ui/carousel";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { useRef } from "react";
-import { ArrowLeft, ArrowRight } from "lucide-react";
+import { useRef, useState, useEffect } from "react";
+import { ArrowLeft, ArrowRight, Play, Pause } from "lucide-react";
 
 const teamMembers = [
   {
@@ -41,6 +41,43 @@ const teamMembers = [
 
 const TeamSection = () => {
   const carouselApi = useRef<any>(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const intervalRef = useRef<NodeJS.Timeout | null>(null);
+
+  const startAutoPlay = () => {
+    if (intervalRef.current) return;
+    setIsPlaying(true);
+    intervalRef.current = setInterval(() => {
+      if (carouselApi.current) {
+        carouselApi.current.scrollNext();
+      }
+    }, 3000); // Change slide every 3 seconds
+  };
+
+  const stopAutoPlay = () => {
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current);
+      intervalRef.current = null;
+    }
+    setIsPlaying(false);
+  };
+
+  const toggleAutoPlay = () => {
+    if (isPlaying) {
+      stopAutoPlay();
+    } else {
+      startAutoPlay();
+    }
+  };
+
+  // Cleanup on unmount
+  useEffect(() => {
+    return () => {
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current);
+      }
+    };
+  }, []);
 
   return (
     <section className="py-20 bg-white">
@@ -80,10 +117,13 @@ const TeamSection = () => {
                     <Card className="border-none shadow-lg">
                       <CardContent className="flex flex-col items-center p-6">
                         <div className="w-48 h-48 mb-4 overflow-hidden rounded-full relative">
-                          <img
+                          <motion.img
                             src={member.image}
                             alt={member.name}
                             className="w-full h-full object-cover"
+                            initial={{ scale: 0.8, opacity: 0 }}
+                            animate={{ scale: 1, opacity: 1 }}
+                            transition={{ duration: 0.5 }}
                           />
                         </div>
                         <h3 className="text-xl font-semibold text-[#335c84] mb-2">{member.name}</h3>
@@ -102,6 +142,22 @@ const TeamSection = () => {
                 </CarouselNext>
               </div>
             </Carousel>
+            <Button
+              onClick={toggleAutoPlay}
+              className="mt-6 bg-[#335c84] hover:bg-[#264666] text-white px-6 py-3 rounded-full shadow-lg transition-all duration-300 flex items-center gap-2"
+            >
+              {isPlaying ? (
+                <>
+                  <Pause className="h-6 w-6" />
+                  Pause
+                </>
+              ) : (
+                <>
+                  <Play className="h-6 w-6" />
+                  Play Slideshow
+                </>
+              )}
+            </Button>
           </div>
         </motion.div>
       </div>
