@@ -17,7 +17,7 @@ const Hero = () => {
             Transforming Education Through Mentorship
           </h1>
           <p className="text-lg md:text-xl text-white/80 mb-8 max-w-2xl mx-auto">
-            Connect with top university mentors to develop advanced research skills and unlock your academic potential.
+            Connect with graduates and professionals to develop advanced research skills and unlock your academic potential.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-white text-[#233e5c] hover:bg-white/90 transition-all duration-300 px-8 py-3 rounded-lg font-semibold">
