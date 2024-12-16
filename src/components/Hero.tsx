@@ -19,12 +19,12 @@ const Hero = () => {
           <p className="text-lg md:text-xl text-white/80 mb-8 max-w-2xl mx-auto">
             Connect with graduates and professionals to develop advanced research skills and unlock your academic potential.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-[#233e5c] hover:bg-white/90 transition-all duration-300 px-8 py-3 rounded-lg font-semibold">
+          <div className="flex justify-center">
+            <button 
+              className="bg-white text-[#233e5c] hover:bg-white/90 transition-all duration-300 px-8 py-3 rounded-lg font-semibold"
+              onClick={() => window.open("https://36xf3wlv9l6.typeform.com/to/JMhyVOqq", "_blank")}
+            >
               Start Your Research Journey
-            </button>
-            <button className="bg-transparent border-2 border-white text-white hover:bg-white/10 transition-all duration-300 px-8 py-3 rounded-lg font-semibold">
-              Share Your Expertise
             </button>
           </div>
         </motion.div>
