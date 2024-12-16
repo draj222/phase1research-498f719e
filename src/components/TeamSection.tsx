@@ -7,9 +7,8 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import { useRef, useState, useEffect } from "react";
-import { ArrowLeft, ArrowRight, Play, Pause } from "lucide-react";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 
 const teamMembers = [
   {
@@ -41,33 +40,15 @@ const teamMembers = [
 
 const TeamSection = () => {
   const carouselApi = useRef<any>(null);
-  const [isPlaying, setIsPlaying] = useState(true); // Changed to true by default
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
   const startAutoPlay = () => {
     if (intervalRef.current) return;
-    setIsPlaying(true);
     intervalRef.current = setInterval(() => {
       if (carouselApi.current) {
         carouselApi.current.scrollNext();
       }
     }, 3000);
-  };
-
-  const stopAutoPlay = () => {
-    if (intervalRef.current) {
-      clearInterval(intervalRef.current);
-      intervalRef.current = null;
-    }
-    setIsPlaying(false);
-  };
-
-  const toggleAutoPlay = () => {
-    if (isPlaying) {
-      stopAutoPlay();
-    } else {
-      startAutoPlay();
-    }
   };
 
   // Start autoplay when component mounts
@@ -143,22 +124,6 @@ const TeamSection = () => {
                 </CarouselNext>
               </div>
             </Carousel>
-            <Button
-              onClick={toggleAutoPlay}
-              className="mt-6 bg-[#335c84] hover:bg-[#264666] text-white px-6 py-3 rounded-full shadow-lg transition-all duration-300 flex items-center gap-2"
-            >
-              {isPlaying ? (
-                <>
-                  <Pause className="h-6 w-6" />
-                  Pause
-                </>
-              ) : (
-                <>
-                  <Play className="h-6 w-6" />
-                  Play
-                </>
-              )}
-            </Button>
           </div>
         </motion.div>
       </div>
