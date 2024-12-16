@@ -6,6 +6,7 @@ import TeamSection from "@/components/TeamSection";
 import StartChapter from "@/components/StartChapter";
 import Partners from "@/components/Partners";
 import PastEvents from "@/components/PastEvents";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
@@ -18,6 +19,7 @@ const Index = () => {
       <EnrollNow />
       <BecomeMentor />
       <StartChapter />
+      <Footer />
     </main>
   );
 };
