@@ -5,6 +5,7 @@ import BecomeMentor from "@/components/BecomeMentor";
 import TeamSection from "@/components/TeamSection";
 import StartChapter from "@/components/StartChapter";
 import Partners from "@/components/Partners";
+import Featured from "@/components/Featured";
 import PastEvents from "@/components/PastEvents";
 import ContactUs from "@/components/ContactUs";
 import Footer from "@/components/Footer";
@@ -18,6 +19,7 @@ const Index = () => {
       <Impact />
       <TeamSection />
       <Partners />
+      <Featured />
       <PastEvents />
       <EnrollNow />
       <BecomeMentor />
