@@ -17,23 +17,39 @@ const Index = () => {
       <Navbar />
       <Hero />
       <div className="h-px bg-white/25 w-full" />
-      <Impact />
+      <div id="impact">
+        <Impact />
+      </div>
       <div className="h-px bg-white/25 w-full" />
-      <TeamSection />
+      <div id="team">
+        <TeamSection />
+      </div>
       <div className="h-px bg-white/25 w-full" />
-      <Partners />
+      <div id="partners">
+        <Partners />
+      </div>
       <div className="h-px bg-white/25 w-full" />
-      <Featured />
+      <div id="events">
+        <Featured />
+        <div className="h-px bg-white/25 w-full" />
+        <PastEvents />
+      </div>
       <div className="h-px bg-white/25 w-full" />
-      <PastEvents />
+      <div id="enroll">
+        <EnrollNow />
+      </div>
       <div className="h-px bg-white/25 w-full" />
-      <EnrollNow />
+      <div id="become-mentor">
+        <BecomeMentor />
+      </div>
       <div className="h-px bg-white/25 w-full" />
-      <BecomeMentor />
+      <div id="start-chapter">
+        <StartChapter />
+      </div>
       <div className="h-px bg-white/25 w-full" />
-      <StartChapter />
-      <div className="h-px bg-white/25 w-full" />
-      <ContactUs />
+      <div id="contact">
+        <ContactUs />
+      </div>
       <Footer />
     </main>
   );
