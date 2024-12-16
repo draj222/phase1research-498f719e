@@ -1,25 +1,31 @@
 import { motion } from "framer-motion";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const PastEvents = () => {
   const events = [
     {
       title: "Research Symposium 2023",
       date: "December 15, 2023",
+      image: "/lovable-uploads/dd3dc8bb-2092-4674-9be1-38aae61ac94e.png",
       description: "Annual gathering of student researchers presenting their findings across multiple disciplines.",
-      attendees: "250+ Participants"
     },
     {
       title: "Summer Research Workshop",
       date: "August 5, 2023",
+      image: "/lovable-uploads/ce5fbbcd-5756-4862-8066-cc4c5d6e873e.png",
       description: "Intensive two-week workshop on research methodologies and academic writing.",
-      attendees: "100+ Students"
     },
     {
       title: "Mentor-Mentee Networking Event",
       date: "June 20, 2023",
+      image: "/lovable-uploads/cafd2c69-f081-4878-837e-6b6db0a661bd.png",
       description: "Connection event bringing together experienced researchers with aspiring students.",
-      attendees: "150+ Attendees"
     }
   ];
 
@@ -38,26 +44,29 @@ const PastEvents = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {events.map((event, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-            >
-              <Card className="h-full hover:shadow-lg transition-shadow duration-300">
-                <CardHeader>
-                  <CardTitle className="text-xl text-[#233e5c]">{event.title}</CardTitle>
-                  <CardDescription>{event.date}</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-600 mb-4">{event.description}</p>
-                  <p className="text-sm font-semibold text-[#233e5c]">{event.attendees}</p>
-                </CardContent>
-              </Card>
-            </motion.div>
-          ))}
+        <div className="max-w-4xl mx-auto">
+          <Carousel className="relative">
+            <CarouselContent>
+              {events.map((event, index) => (
+                <CarouselItem key={index}>
+                  <div className="relative">
+                    <img 
+                      src={event.image} 
+                      alt={event.title}
+                      className="w-full h-[400px] object-cover rounded-lg"
+                    />
+                    <div className="absolute bottom-0 left-0 right-0 bg-black/60 p-6 rounded-b-lg">
+                      <h3 className="text-xl font-bold text-white mb-2">{event.title}</h3>
+                      <p className="text-white/80 text-sm mb-1">{event.date}</p>
+                      <p className="text-white/90">{event.description}</p>
+                    </div>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="absolute -left-12 top-1/2 transform -translate-y-1/2" />
+            <CarouselNext className="absolute -right-12 top-1/2 transform -translate-y-1/2" />
+          </Carousel>
         </div>
       </div>
     </section>
