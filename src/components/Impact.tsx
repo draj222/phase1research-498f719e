@@ -17,7 +17,7 @@ const Counter = ({ value, className }: { value: string; className?: string }) =>
 
   useEffect(() => {
     const animation = animate(count, baseNumber, {
-      duration: baseNumber > 1000 ? 3 : 1.5,
+      duration: baseNumber > 1000 ? 5 : 2.5, // Increased duration by ~80%
       ease: (t) => {
         // Custom easing function that slows down near target-500
         const slowdownThreshold = baseNumber - 500;
