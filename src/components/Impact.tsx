@@ -1,5 +1,5 @@
 import { motion, useMotionValue, useTransform, animate } from "framer-motion";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const stats = [
   { number: "500+", label: "Students Mentored" },
@@ -8,7 +8,7 @@ const stats = [
   { number: "30+", label: "Countries Reached" },
 ];
 
-const Counter = ({ value }: { value: string }) => {
+const Counter = ({ value, className }: { value: string; className?: string }) => {
   const baseNumber = parseInt(value);
   const count = useMotionValue(0);
   const rounded = useTransform(count, (latest) => Math.round(latest));
@@ -22,43 +22,73 @@ const Counter = ({ value }: { value: string }) => {
     return animation.stop;
   }, [baseNumber, count]);
 
-  return <motion.span>{rounded}</motion.span>;
+  return <motion.span className={className}>{rounded}</motion.span>;
 };
 
 const Impact = () => {
+  const [showOtherStats, setShowOtherStats] = useState(false);
+
+  useEffect(() => {
+    // After the main counter animation (2s) + a small delay, show other stats
+    const timer = setTimeout(() => {
+      setShowOtherStats(true);
+    }, 2500);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
-    <section className="py-20 bg-black">
+    <section className="min-h-screen bg-black">
       <div className="container mx-auto px-4">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="pt-20 flex flex-col items-start"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Our Impact</h2>
-          <p className="text-white/80 max-w-2xl mx-auto">
-            Through our programs, we've made significant strides in bridging the educational gap globally.
-          </p>
-        </motion.div>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-          {stats.map((stat, index) => (
-            <motion.div
-              key={stat.label}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="text-center"
-            >
-              <div className="text-4xl md:text-6xl font-bold text-[#335c84] mb-2">
-                <Counter value={stat.number.replace('+', '')} />
-                {stat.number.includes('+') && '+'}
+          {/* Main counter */}
+          <motion.div
+            className={`text-left transition-all duration-500 ${
+              showOtherStats ? "transform -translate-y-10 scale-75" : ""
+            }`}
+          >
+            <div className="flex items-baseline gap-4">
+              <div className="text-8xl md:text-9xl font-bold text-[#335c84]">
+                <Counter value="500" />
+                <span>+</span>
               </div>
-              <div className="text-white/80">{stat.label}</div>
+              <div className="text-4xl md:text-5xl text-white/80">
+                students mentored
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Other stats */}
+          {showOtherStats && (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="grid grid-cols-3 gap-8 mt-20"
+            >
+              {stats.slice(1).map((stat, index) => (
+                <motion.div
+                  key={stat.label}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="text-center"
+                >
+                  <div className="text-4xl md:text-5xl font-bold text-[#335c84] mb-2">
+                    <Counter value={stat.number.replace('+', '')} />
+                    {stat.number.includes('+') && '+'}
+                  </div>
+                  <div className="text-white/80">{stat.label}</div>
+                </motion.div>
+              ))}
             </motion.div>
-          ))}
-        </div>
+          )}
+        </motion.div>
       </div>
     </section>
   );
