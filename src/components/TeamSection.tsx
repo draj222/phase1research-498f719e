@@ -94,10 +94,10 @@ const TeamSection = () => {
                 ))}
               </CarouselContent>
               <div className="hidden md:block">
-                <CarouselPrevious className="left-0 h-12 w-12 rounded-full bg-[#335c84] hover:bg-[#264666] text-white border-none">
+                <CarouselPrevious className="left-0 h-12 w-12 rounded-full bg-[#1EAEDB] hover:bg-[#0FA0CE] text-white border-none">
                   <ArrowLeft className="h-6 w-6" />
                 </CarouselPrevious>
-                <CarouselNext className="right-0 h-12 w-12 rounded-full bg-[#335c84] hover:bg-[#264666] text-white border-none">
+                <CarouselNext className="right-0 h-12 w-12 rounded-full bg-[#1EAEDB] hover:bg-[#0FA0CE] text-white border-none">
                   <ArrowRight className="h-6 w-6" />
                 </CarouselNext>
               </div>
