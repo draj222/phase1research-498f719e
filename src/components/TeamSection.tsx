@@ -53,7 +53,7 @@ const TeamSection = () => {
       if (carouselApi.current) {
         carouselApi.current.scrollNext();
       }
-    }, 6000); // Changed from 3000 to 6000 ms
+    }, 4000); // Changed from 6000 to 4000 ms
   };
 
   useEffect(() => {
