@@ -2,9 +2,9 @@ import { motion, useMotionValue, useTransform, animate } from "framer-motion";
 import { useEffect, useState } from "react";
 
 const stats = [
-  { number: "10,000+", label: "Aspiring Researchers Guided to Success" },
-  { number: "5,000+", label: "Distinguished Academic Mentors" },
-  { number: "30+", label: "Global Academic Communities Served" },
+  { number: "10,000+", label: "Students Mentored" },
+  { number: "5,000+", label: "Active Mentors" },
+  { number: "30+", label: "Countries Reached" },
 ];
 
 const Counter = ({ value, className }: { value: string; className?: string }) => {
