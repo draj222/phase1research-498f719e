@@ -59,7 +59,7 @@ const Impact = () => {
             <div className="w-20 h-1 bg-[#335c84] mx-auto"></div>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="flex flex-wrap justify-center gap-8 max-w-7xl mx-auto">
             {stats.map((stat, index) => (
               <motion.div
                 key={stat.label}
@@ -67,7 +67,7 @@ const Impact = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="text-center p-6 rounded-lg bg-white shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1"
+                className="text-center p-6 rounded-lg bg-white shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 w-[200px]"
               >
                 <div className="text-4xl md:text-5xl font-bold text-[#335c84] mb-2">
                   <Counter value={stat.number.replace('+', '')} />
