@@ -16,6 +16,12 @@ const PastEvents = () => {
       description: "Engaging with students at an under-resourced school in India, where we donated over $2,500 in portable solar kits. Each student built their own kit equipped with a light and fan while learning about energy sustainability.",
     },
     {
+      title: "Technology Donation Drive - Mali",
+      date: "July 7, 2024",
+      image: "/lovable-uploads/c3b60c50-b1e5-471e-a33f-297964c172f0.png",
+      description: "Supporting digital education in Mali through the donation of 100 PCs and monitors, helping bridge the technological divide and enhance learning opportunities.",
+    },
+    {
       title: "Summer Research Workshop",
       date: "August 5, 2023",
       image: "/lovable-uploads/ce5fbbcd-5756-4862-8066-cc4c5d6e873e.png",
