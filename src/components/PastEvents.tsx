@@ -24,7 +24,7 @@ const PastEvents = () => {
   ];
 
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-16 bg-[#233e5c]">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -32,8 +32,8 @@ const PastEvents = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl font-bold text-[#233e5c] mb-4">Past Events</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <h2 className="text-3xl font-bold text-white mb-4">Past Events</h2>
+          <p className="text-white/80 max-w-2xl mx-auto">
             Explore our previous research mentorship events and activities that have helped shape the future of academic research.
           </p>
         </motion.div>
