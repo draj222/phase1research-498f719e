@@ -17,7 +17,7 @@ const Hero = () => {
             Transforming Education Through Mentorship
           </h1>
           <p className="text-lg md:text-xl text-white/80 mb-8 max-w-2xl mx-auto">
-            Connecting students with mentors from T20 universities and industry professionals to build essential research skills.
+            Forge your path to academic excellence through personalized mentorship from leading T20 university scholars and industry experts. Develop cutting-edge research skills, unlock your potential, and join a global community of innovative thinkers and future leaders.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-white text-[#335c84] hover:bg-white/90 transition-all duration-300 px-8 py-3 rounded-lg font-semibold">
