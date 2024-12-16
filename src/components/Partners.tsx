@@ -29,7 +29,7 @@ const Partners = () => {
           <div className="w-20 h-1 bg-white mx-auto"></div>
         </motion.div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-x-12 gap-y-16 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-16 max-w-6xl mx-auto">
           {partners.map((partner, index) => (
             <motion.div
               key={index}
@@ -39,7 +39,7 @@ const Partners = () => {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="flex flex-col items-center justify-center"
             >
-              <div className="bg-white p-4 rounded-lg w-40 h-32 flex items-center justify-center">
+              <div className="bg-white p-4 rounded-lg w-48 h-36 flex items-center justify-center">
                 <img
                   src={partner.logo}
                   alt={partner.name}
