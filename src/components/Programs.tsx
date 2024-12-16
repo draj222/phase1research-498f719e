@@ -45,7 +45,7 @@ const Programs = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
-              className="p-6 rounded-xl bg-black border border-[#335c84]/20 shadow-sm hover:shadow-md transition-all duration-300"
+              className="p-6 rounded-xl bg-[#3a536d] border border-[#335c84]/20 shadow-sm hover:shadow-md transition-all duration-300"
             >
               <div className="mb-4 p-3 inline-block bg-[#335c84]/10 rounded-lg">
                 {program.icon}
