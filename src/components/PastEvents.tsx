@@ -1,11 +1,14 @@
 import { motion } from "framer-motion";
-import { useEffect } from "react";
+import { useRef, useEffect } from "react";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
 } from "@/components/ui/carousel";
-import useEmblaCarousel from "embla-carousel-react";
+import { Card, CardContent } from "@/components/ui/card";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 
 const PastEvents = () => {
   const events = [
@@ -23,29 +26,27 @@ const PastEvents = () => {
     }
   ];
 
-  const [emblaRef, emblaApi] = useEmblaCarousel({ 
-    loop: true,
-    dragFree: false
-  });
+  const carouselApi = useRef<any>(null);
+  const intervalRef = useRef<NodeJS.Timeout | null>(null);
+
+  const startAutoPlay = () => {
+    if (intervalRef.current) return;
+    intervalRef.current = setInterval(() => {
+      if (carouselApi.current) {
+        console.log('Auto-scrolling to next slide');
+        carouselApi.current.scrollNext();
+      }
+    }, 4000);
+  };
 
   useEffect(() => {
-    if (emblaApi) {
-      console.log('Setting up carousel interval: 3000ms');
-      
-      // Initialize the carousel
-      emblaApi.reInit();
-      
-      const intervalId = setInterval(() => {
-        console.log('Auto-scrolling to next slide');
-        emblaApi.scrollNext();
-      }, 3000);
-
-      return () => {
-        console.log('Cleaning up carousel interval');
-        clearInterval(intervalId);
-      };
-    }
-  }, [emblaApi]);
+    startAutoPlay();
+    return () => {
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current);
+      }
+    };
+  }, []);
 
   return (
     <section className="py-16 bg-[#233e5c]">
@@ -62,29 +63,47 @@ const PastEvents = () => {
           </p>
         </motion.div>
 
-        <div className="max-w-4xl mx-auto">
-          <Carousel 
-            ref={emblaRef}
-            className="relative"
+        <div className="max-w-4xl mx-auto relative">
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            setApi={(api) => {
+              carouselApi.current = api;
+            }}
+            className="w-full"
           >
             <CarouselContent>
               {events.map((event, index) => (
-                <CarouselItem key={index}>
-                  <div className="relative">
-                    <img 
-                      src={event.image} 
-                      alt={event.title}
-                      className="w-full h-[400px] object-cover rounded-lg"
-                    />
-                    <div className="absolute bottom-0 left-0 right-0 bg-black/60 p-6 rounded-b-lg">
-                      <h3 className="text-xl font-bold text-white mb-2">{event.title}</h3>
-                      <p className="text-white/80 text-sm mb-1">{event.date}</p>
-                      <p className="text-white/90">{event.description}</p>
-                    </div>
-                  </div>
+                <CarouselItem key={index} className="md:basis-1/1">
+                  <Card className="border-none bg-white/10 backdrop-blur-sm shadow-lg">
+                    <CardContent className="p-0">
+                      <div className="relative">
+                        <img 
+                          src={event.image} 
+                          alt={event.title}
+                          className="w-full h-[400px] object-cover rounded-lg"
+                        />
+                        <div className="absolute bottom-0 left-0 right-0 bg-black/60 p-6 rounded-b-lg">
+                          <h3 className="text-xl font-bold text-white mb-2">{event.title}</h3>
+                          <p className="text-white/80 text-sm mb-1">{event.date}</p>
+                          <p className="text-white/90">{event.description}</p>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
                 </CarouselItem>
               ))}
             </CarouselContent>
+            <div className="hidden md:block">
+              <CarouselPrevious className="absolute top-1/2 -translate-y-1/2 -left-20 h-16 w-16 rounded-full bg-white/10 hover:bg-white/20 text-white border-2 border-white/50 shadow-lg">
+                <ArrowLeft className="h-10 w-10" />
+              </CarouselPrevious>
+              <CarouselNext className="absolute top-1/2 -translate-y-1/2 -right-20 h-16 w-16 rounded-full bg-white/10 hover:bg-white/20 text-white border-2 border-white/50 shadow-lg">
+                <ArrowRight className="h-10 w-10" />
+              </CarouselNext>
+            </div>
           </Carousel>
         </div>
       </div>
