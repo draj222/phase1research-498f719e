@@ -8,10 +8,12 @@ import Partners from "@/components/Partners";
 import PastEvents from "@/components/PastEvents";
 import ContactUs from "@/components/ContactUs";
 import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar";
 
 const Index = () => {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen pt-16">
+      <Navbar />
       <Hero />
       <Impact />
       <TeamSection />
