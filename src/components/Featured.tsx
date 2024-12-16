@@ -18,7 +18,7 @@ const Featured = () => {
   ];
 
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16" style={{ backgroundColor: '#233e5c' }}>
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -27,8 +27,8 @@ const Featured = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-[#233e5c] mb-4">As Featured On</h2>
-          <div className="w-20 h-1 bg-[#233e5c] mx-auto"></div>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">As Featured On</h2>
+          <div className="w-20 h-1 bg-white mx-auto"></div>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
@@ -45,7 +45,8 @@ const Featured = () => {
                 href={feature.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+                style={{ backgroundColor: '#3a536d' }}
+                className="block p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
               >
                 <div className="flex items-center justify-between mb-4">
                   <img
@@ -53,12 +54,12 @@ const Featured = () => {
                     alt={feature.source}
                     className="h-8 object-contain"
                   />
-                  <ExternalLink className="text-gray-400 group-hover:text-[#233e5c] transition-colors" size={20} />
+                  <ExternalLink className="text-gray-400 group-hover:text-white transition-colors" size={20} />
                 </div>
-                <h3 className="text-lg font-semibold text-gray-800 mb-2 group-hover:text-[#233e5c] transition-colors">
+                <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-white transition-colors">
                   {feature.title}
                 </h3>
-                <p className="text-sm text-gray-600">{feature.source}</p>
+                <p className="text-sm text-gray-300">{feature.source}</p>
               </a>
             </motion.div>
           ))}
