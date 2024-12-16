@@ -23,13 +23,13 @@ const Partners = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-12"
+          className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Our Partners</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Partners and Supporters</h2>
           <div className="w-20 h-1 bg-white mx-auto"></div>
         </motion.div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-x-12 gap-y-16 max-w-7xl mx-auto">
           {partners.map((partner, index) => (
             <motion.div
               key={index}
@@ -37,16 +37,15 @@ const Partners = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="flex flex-col items-center"
+              className="flex flex-col items-center justify-center"
             >
-              <div className="p-2 rounded-lg w-24 h-24 flex items-center justify-center">
+              <div className="bg-white p-4 rounded-lg w-40 h-32 flex items-center justify-center">
                 <img
                   src={partner.logo}
                   alt={partner.name}
                   className="max-w-full max-h-full object-contain"
                 />
               </div>
-              <p className="text-white mt-2 font-medium">{partner.name}</p>
             </motion.div>
           ))}
         </div>
@@ -56,7 +55,7 @@ const Partners = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mt-12"
+          className="text-center mt-16"
         >
           <Button 
             size="lg"
