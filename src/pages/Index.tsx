@@ -2,7 +2,6 @@ import Hero from "@/components/Hero";
 import Programs from "@/components/Programs";
 import Impact from "@/components/Impact";
 import SupportSection from "@/components/SupportSection";
-import Partners from "@/components/Partners";
 import { motion } from "framer-motion";
 
 const Index = () => {
@@ -11,7 +10,6 @@ const Index = () => {
       <Hero />
       <Impact />
       <Programs />
-      <Partners />
       <SupportSection />
       <motion.section
         initial={{ opacity: 0, y: 20 }}
