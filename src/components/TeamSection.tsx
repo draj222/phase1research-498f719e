@@ -22,7 +22,7 @@ const teamMembers = [
     role: "Co-Founder"
   },
   {
-    image: "/lovable-uploads/419d1221-eb5d-4d25-b456-07afafd1d623.png",
+    image: "/lovable-uploads/0a61d3e4-6533-4fda-8d60-53c58693e587.png",
     name: "Team Member 3",
     role: "Co-Founder"
   },
