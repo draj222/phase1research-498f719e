@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 
 const stats = [
   { number: "500+", label: "Students Mentored" },
-  { number: "50+", label: "Partner Universities" },
   { number: "200+", label: "Active Mentors" },
   { number: "30+", label: "Countries Reached" },
 ];
