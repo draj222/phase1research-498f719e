@@ -96,14 +96,12 @@ const PastEvents = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <div className="hidden md:block">
-              <CarouselPrevious className="absolute top-1/2 -translate-y-1/2 -left-20 h-16 w-16 rounded-full bg-white/10 hover:bg-white/20 text-white border-2 border-white/50 shadow-lg">
-                <ArrowLeft className="h-10 w-10" />
-              </CarouselPrevious>
-              <CarouselNext className="absolute top-1/2 -translate-y-1/2 -right-20 h-16 w-16 rounded-full bg-white/10 hover:bg-white/20 text-white border-2 border-white/50 shadow-lg">
-                <ArrowRight className="h-10 w-10" />
-              </CarouselNext>
-            </div>
+            <CarouselPrevious className="absolute top-1/2 -translate-y-1/2 md:-left-20 left-2 h-12 w-12 md:h-16 md:w-16 rounded-full bg-white/10 hover:bg-white/20 text-white border-2 border-white/50 shadow-lg">
+              <ArrowLeft className="h-6 w-6 md:h-10 md:w-10" />
+            </CarouselPrevious>
+            <CarouselNext className="absolute top-1/2 -translate-y-1/2 md:-right-20 right-2 h-12 w-12 md:h-16 md:w-16 rounded-full bg-white/10 hover:bg-white/20 text-white border-2 border-white/50 shadow-lg">
+              <ArrowRight className="h-6 w-6 md:h-10 md:w-10" />
+            </CarouselNext>
           </Carousel>
         </div>
       </div>
