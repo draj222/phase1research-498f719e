@@ -1,6 +1,7 @@
 import Hero from "@/components/Hero";
 import Impact from "@/components/Impact";
 import EnrollNow from "@/components/EnrollNow";
+import BecomeMentor from "@/components/BecomeMentor";
 import SupportSection from "@/components/SupportSection";
 import TeamSection from "@/components/TeamSection";
 
@@ -11,6 +12,7 @@ const Index = () => {
       <Impact />
       <TeamSection />
       <EnrollNow />
+      <BecomeMentor />
       <SupportSection />
     </main>
   );
