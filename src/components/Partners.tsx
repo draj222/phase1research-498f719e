@@ -60,8 +60,9 @@ const Partners = () => {
           <Button 
             size="lg"
             className="bg-white hover:bg-white/90 text-[#233e5c] font-semibold text-lg px-8 py-6"
+            onClick={() => window.open("https://36xf3wlv9l6.typeform.com/to/jDvGezuU", "_blank")}
           >
-            Partner with us
+            Partner With Us
           </Button>
         </motion.div>
       </div>
