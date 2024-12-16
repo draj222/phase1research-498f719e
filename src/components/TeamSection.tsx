@@ -7,6 +7,8 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { useRef } from "react";
 
 const teamMembers = [
   {
@@ -37,6 +39,14 @@ const teamMembers = [
 ];
 
 const TeamSection = () => {
+  const carouselApi = useRef<any>(null);
+
+  const handleNextClick = () => {
+    if (carouselApi.current) {
+      carouselApi.current.scrollNext();
+    }
+  };
+
   return (
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
@@ -64,6 +74,9 @@ const TeamSection = () => {
                 align: "start",
                 loop: true,
               }}
+              setApi={(api) => {
+                carouselApi.current = api;
+              }}
               className="w-full"
             >
               <CarouselContent>
@@ -90,6 +103,12 @@ const TeamSection = () => {
                 <CarouselNext className="right-0" />
               </div>
             </Carousel>
+            <Button 
+              onClick={handleNextClick}
+              className="mt-8 bg-[#335c84] hover:bg-[#264666] text-white"
+            >
+              Next Team Member
+            </Button>
           </div>
         </motion.div>
       </div>
