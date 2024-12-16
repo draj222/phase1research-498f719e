@@ -9,6 +9,7 @@ import {
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { useRef } from "react";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 
 const teamMembers = [
   {
@@ -40,12 +41,6 @@ const teamMembers = [
 
 const TeamSection = () => {
   const carouselApi = useRef<any>(null);
-
-  const handleNextClick = () => {
-    if (carouselApi.current) {
-      carouselApi.current.scrollNext();
-    }
-  };
 
   return (
     <section className="py-20 bg-white">
@@ -99,16 +94,14 @@ const TeamSection = () => {
                 ))}
               </CarouselContent>
               <div className="hidden md:block">
-                <CarouselPrevious className="left-0" />
-                <CarouselNext className="right-0" />
+                <CarouselPrevious className="left-0 h-12 w-12 rounded-full bg-[#335c84] hover:bg-[#264666] text-white border-none">
+                  <ArrowLeft className="h-6 w-6" />
+                </CarouselPrevious>
+                <CarouselNext className="right-0 h-12 w-12 rounded-full bg-[#335c84] hover:bg-[#264666] text-white border-none">
+                  <ArrowRight className="h-6 w-6" />
+                </CarouselNext>
               </div>
             </Carousel>
-            <Button 
-              onClick={handleNextClick}
-              className="mt-8 bg-[#335c84] hover:bg-[#264666] text-white"
-            >
-              Next Team Member
-            </Button>
           </div>
         </motion.div>
       </div>
