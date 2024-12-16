@@ -19,67 +19,67 @@ const Navbar = () => {
       animate={{ opacity: 1, y: 0 }}
       className="fixed top-0 w-full z-50 bg-[#233e5c] shadow-lg"
     >
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-2 md:px-4">
         <div className="flex items-center justify-between h-16">
-          <a href="#" className="text-white font-semibold text-xl">
+          <a href="#" className="text-white font-semibold text-lg md:text-xl whitespace-nowrap">
             Phase 1 Research
           </a>
           
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-6">
+          <div className="hidden md:flex items-center space-x-3 lg:space-x-6">
             <a 
               href="#impact" 
               onClick={scrollToSection('impact')}
-              className="text-gray-300 hover:text-white transition-colors text-sm font-medium"
+              className="text-gray-300 hover:text-white transition-colors text-xs lg:text-sm font-medium whitespace-nowrap"
             >
               Impact
             </a>
             <a 
               href="#team" 
               onClick={scrollToSection('team')}
-              className="text-gray-300 hover:text-white transition-colors text-sm font-medium"
+              className="text-gray-300 hover:text-white transition-colors text-xs lg:text-sm font-medium whitespace-nowrap"
             >
               Team
             </a>
             <a 
               href="#partners" 
               onClick={scrollToSection('partners')}
-              className="text-gray-300 hover:text-white transition-colors text-sm font-medium"
+              className="text-gray-300 hover:text-white transition-colors text-xs lg:text-sm font-medium whitespace-nowrap"
             >
               Partners
             </a>
             <a 
               href="#events" 
               onClick={scrollToSection('events')}
-              className="text-gray-300 hover:text-white transition-colors text-sm font-medium"
+              className="text-gray-300 hover:text-white transition-colors text-xs lg:text-sm font-medium whitespace-nowrap"
             >
               Events
             </a>
             <a 
               href="#enroll" 
               onClick={scrollToSection('enroll')}
-              className="text-gray-300 hover:text-white transition-colors text-sm font-medium"
+              className="text-gray-300 hover:text-white transition-colors text-xs lg:text-sm font-medium whitespace-nowrap"
             >
               Enroll
             </a>
             <a 
               href="#become-mentor" 
               onClick={scrollToSection('become-mentor')}
-              className="text-gray-300 hover:text-white transition-colors text-sm font-medium"
+              className="text-gray-300 hover:text-white transition-colors text-xs lg:text-sm font-medium whitespace-nowrap"
             >
               Become A Mentor
             </a>
             <a 
               href="#start-chapter" 
               onClick={scrollToSection('start-chapter')}
-              className="text-gray-300 hover:text-white transition-colors text-sm font-medium"
+              className="text-gray-300 hover:text-white transition-colors text-xs lg:text-sm font-medium whitespace-nowrap"
             >
               Start Chapter
             </a>
             <a 
               href="#contact" 
               onClick={scrollToSection('contact')}
-              className="text-gray-300 hover:text-white transition-colors text-sm font-medium"
+              className="text-gray-300 hover:text-white transition-colors text-xs lg:text-sm font-medium whitespace-nowrap"
             >
               Contact
             </a>
