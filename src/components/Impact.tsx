@@ -37,7 +37,7 @@ const Impact = () => {
   }, []);
 
   return (
-    <section className="min-h-[50vh] bg-white overflow-x-hidden">
+    <section className="min-h-[50vh] bg-white">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0 }}
@@ -59,15 +59,15 @@ const Impact = () => {
             <div className="w-20 h-1 bg-[#335c84] mx-auto"></div>
           </div>
           
-          <div className="flex overflow-x-auto pb-8 gap-8 w-full snap-x snap-mandatory">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {stats.map((stat, index) => (
               <motion.div
                 key={stat.label}
-                initial={{ opacity: 0, x: 50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="flex-shrink-0 snap-center w-[280px] text-center p-6 rounded-lg bg-white shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1"
+                className="text-center p-6 rounded-lg bg-white shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1"
               >
                 <div className="text-4xl md:text-5xl font-bold text-[#335c84] mb-2">
                   <Counter value={stat.number.replace('+', '')} />
