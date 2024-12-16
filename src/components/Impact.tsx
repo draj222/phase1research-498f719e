@@ -50,7 +50,7 @@ const Impact = () => {
   }, []);
 
   return (
-    <section className="min-h-[50vh]">
+    <section className="min-h-[50vh] bg-[#233e5c]">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0 }}

@@ -21,7 +21,7 @@ const programs = [
 
 const Programs = () => {
   return (
-    <section className="py-20 bg-black">
+    <section className="py-20 bg-[#233e5c]">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <motion.h2
