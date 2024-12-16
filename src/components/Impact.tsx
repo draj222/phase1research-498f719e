@@ -67,7 +67,7 @@ const Impact = () => {
             >
               Our Impact
             </motion.h2>
-            <div className="w-20 h-1 bg-white mx-auto mt-20"></div>
+            <div className="w-20 h-1 bg-white mx-auto mt-8"></div>
           </div>
           
           <div className="flex flex-wrap justify-center gap-8 max-w-7xl mx-auto">
