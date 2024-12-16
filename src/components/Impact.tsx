@@ -1,4 +1,5 @@
-import { motion } from "framer-motion";
+import { motion, useMotionValue, useTransform, animate } from "framer-motion";
+import { useEffect } from "react";
 
 const stats = [
   { number: "500+", label: "Students Mentored" },
@@ -6,6 +7,23 @@ const stats = [
   { number: "200+", label: "Active Mentors" },
   { number: "30+", label: "Countries Reached" },
 ];
+
+const Counter = ({ value }: { value: string }) => {
+  const baseNumber = parseInt(value);
+  const count = useMotionValue(0);
+  const rounded = useTransform(count, (latest) => Math.round(latest));
+
+  useEffect(() => {
+    const animation = animate(count, baseNumber, {
+      duration: 2,
+      ease: "easeOut",
+    });
+
+    return animation.stop;
+  }, [baseNumber, count]);
+
+  return <motion.span>{rounded}</motion.span>;
+};
 
 const Impact = () => {
   return (
@@ -33,8 +51,9 @@ const Impact = () => {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="text-center"
             >
-              <div className="text-4xl md:text-5xl font-bold text-[#335c84] mb-2">
-                {stat.number}
+              <div className="text-4xl md:text-6xl font-bold text-[#335c84] mb-2">
+                <Counter value={stat.number.replace('+', '')} />
+                {stat.number.includes('+') && '+'}
               </div>
               <div className="text-white/80">{stat.label}</div>
             </motion.div>
