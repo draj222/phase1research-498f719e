@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-center gap-6">
           <a
-            href="https://instagram.com"
+            href="https://www.instagram.com/p1research"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-accent transition-colors"
@@ -16,7 +16,7 @@ const Footer = () => {
             <Instagram className="w-6 h-6" />
           </a>
           <a
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/company/phase-1-research/"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-accent transition-colors"
@@ -24,9 +24,14 @@ const Footer = () => {
           >
             <Linkedin className="w-6 h-6" />
           </a>
-          <Link to="/donate" className="hover:text-accent transition-colors">
+          <a
+            href="https://www.gofundme.com/f/build-research-facilities-in-underprivileged-areas-student?attribution_id=undefined&utm_campaign=fp_sharesheet&utm_medium=customer&utm_source=website_widget"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-accent transition-colors"
+          >
             Donate
-          </Link>
+          </a>
           <Link to="/contact" className="hover:text-accent transition-colors">
             Contact Us
           </Link>
