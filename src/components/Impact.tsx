@@ -57,7 +57,7 @@ const Impact = () => {
           transition={{ duration: 0.6 }}
           className="pt-20 flex flex-col items-center"
         >
-          <div className="text-center mb-24">
+          <div className="text-center mb-32">
             <motion.h2 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
