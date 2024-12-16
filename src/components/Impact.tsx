@@ -12,20 +12,18 @@ const Counter = ({ value, className }: { value: string; className?: string }) =>
   const count = useMotionValue(0);
   const rounded = useTransform(count, (latest) => {
     const num = Math.round(latest);
-    return num.toLocaleString(); // This will add commas to the number
+    return num.toLocaleString();
   });
 
   useEffect(() => {
     const animation = animate(count, baseNumber, {
-      duration: baseNumber > 1000 ? 5 : 2.5, // Increased duration by ~80%
+      duration: baseNumber > 1000 ? 5 : 2.5,
       ease: (t) => {
-        // Custom easing function that slows down near target-500
         const slowdownThreshold = baseNumber - (baseNumber > 1000 ? 500 : 5);
         if (count.get() > slowdownThreshold) {
-          // Dramatically slow down for the last numbers
-          return t * (1 - Math.pow(t - 1, 8)); // Increased power for even slower animation
+          return t * (1 - Math.pow(t - 1, 8));
         }
-        return t * t; // Faster at the start
+        return t * t;
       },
       onUpdate: (latest) => {
         console.log('Current count:', latest);
@@ -59,7 +57,7 @@ const Impact = () => {
           transition={{ duration: 0.6 }}
           className="pt-20 flex flex-col items-center"
         >
-          <div className="text-center mb-16">
+          <div className="text-center mb-24">
             <motion.h2 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
