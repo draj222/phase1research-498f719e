@@ -4,8 +4,6 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
 } from "@/components/ui/carousel";
 import useEmblaCarousel from "embla-carousel-react";
 
@@ -87,8 +85,6 @@ const PastEvents = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="absolute -left-12 top-1/2 transform -translate-y-1/2" />
-            <CarouselNext className="absolute -right-12 top-1/2 transform -translate-y-1/2" />
           </Carousel>
         </div>
       </div>
