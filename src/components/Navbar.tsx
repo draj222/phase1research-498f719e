@@ -13,6 +13,13 @@ const Navbar = () => {
     setIsOpen(false); // Close mobile menu after clicking
   };
 
+  const scrollToTop = (e: React.MouseEvent) => {
+    e.preventDefault();
+    console.log('Scrolling to top');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    setIsOpen(false);
+  };
+
   return (
     <motion.nav 
       initial={{ opacity: 0, y: -20 }}
@@ -21,7 +28,7 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-2 md:px-4">
         <div className="flex items-center justify-between h-16">
-          <a href="#" className="text-white font-semibold text-lg md:text-xl whitespace-nowrap">
+          <a href="#" onClick={scrollToTop} className="text-white font-semibold text-lg md:text-xl whitespace-nowrap">
             Phase 1 Research
           </a>
           
