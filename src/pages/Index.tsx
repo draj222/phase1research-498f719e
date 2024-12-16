@@ -16,14 +16,23 @@ const Index = () => {
     <main className="min-h-screen pt-16">
       <Navbar />
       <Hero />
+      <div className="h-px bg-white/10 w-full" />
       <Impact />
+      <div className="h-px bg-white/10 w-full" />
       <TeamSection />
+      <div className="h-px bg-white/10 w-full" />
       <Partners />
+      <div className="h-px bg-white/10 w-full" />
       <Featured />
+      <div className="h-px bg-white/10 w-full" />
       <PastEvents />
+      <div className="h-px bg-white/10 w-full" />
       <EnrollNow />
+      <div className="h-px bg-white/10 w-full" />
       <BecomeMentor />
+      <div className="h-px bg-white/10 w-full" />
       <StartChapter />
+      <div className="h-px bg-white/10 w-full" />
       <ContactUs />
       <Footer />
     </main>
