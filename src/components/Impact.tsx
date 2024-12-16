@@ -14,8 +14,17 @@ const Counter = ({ value, className }: { value: string; className?: string }) =>
 
   useEffect(() => {
     const animation = animate(count, baseNumber, {
-      duration: 2,
-      ease: "easeOut",
+      duration: baseNumber > 400 ? 3 : 1.5,
+      ease: (t) => {
+        // Custom easing function that slows down near 420
+        if (count.get() > 400) {
+          return t * (1 - Math.pow(t - 1, 4)); // Slower near the end
+        }
+        return t * t; // Faster at the start
+      },
+      onUpdate: (latest) => {
+        console.log('Current count:', latest);
+      }
     });
 
     return animation.stop;
