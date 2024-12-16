@@ -29,7 +29,7 @@ const PastEvents = () => {
     if (emblaApi) {
       const intervalId = setInterval(() => {
         emblaApi.scrollNext();
-      }, 8000); // 8 seconds
+      }, 5000); // Changed from 8000 to 5000 milliseconds
 
       return () => clearInterval(intervalId);
     }
