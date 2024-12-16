@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-[#335c84]">
+    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-[#233e5c]">
       <div className="container mx-auto px-4 py-16 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -20,7 +20,7 @@ const Hero = () => {
             Connect with top university mentors to develop advanced research skills and unlock your academic potential.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-[#335c84] hover:bg-white/90 transition-all duration-300 px-8 py-3 rounded-lg font-semibold">
+            <button className="bg-white text-[#233e5c] hover:bg-white/90 transition-all duration-300 px-8 py-3 rounded-lg font-semibold">
               Start Your Research Journey
             </button>
             <button className="bg-transparent border-2 border-white text-white hover:bg-white/10 transition-all duration-300 px-8 py-3 rounded-lg font-semibold">
