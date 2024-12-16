@@ -7,7 +7,7 @@ const Featured = () => {
       title: "High School Students Bring Educational Resources to Underdeveloped Countries",
       source: "Independent News",
       link: "https://www.independentnews.com/news/dublin_news/high-school-students-bring-educational-resources-to-underdeveloped-countries/article_09869a26-44d4-11ef-a3ee-73d109318fee.html",
-      logo: "/lovable-uploads/985987cd-ef69-46cf-8f32-6d9fe73b8dee.png"
+      logo: "/lovable-uploads/adc4d919-3fef-42f7-8231-8178cff164c5.png"
     },
     {
       title: "Opinion: The Power of Youth Research - Phase 1's Mission to Revolutionize Education",
