@@ -20,9 +20,9 @@ const Counter = ({ value, className }: { value: string; className?: string }) =>
       duration: baseNumber > 1000 ? 5 : 2.5, // Increased duration by ~80%
       ease: (t) => {
         // Custom easing function that slows down near target-500
-        const slowdownThreshold = baseNumber - 500;
+        const slowdownThreshold = baseNumber - (baseNumber > 1000 ? 500 : 5);
         if (count.get() > slowdownThreshold) {
-          // Dramatically slow down for the last 500 numbers
+          // Dramatically slow down for the last numbers
           return t * (1 - Math.pow(t - 1, 8)); // Increased power for even slower animation
         }
         return t * t; // Faster at the start
