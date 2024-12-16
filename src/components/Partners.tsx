@@ -29,7 +29,7 @@ const Partners = () => {
           <div className="w-20 h-1 bg-white mx-auto"></div>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-16 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-16 max-w-6xl mx-auto [&>*:last-child]:lg:col-span-3 [&>*:last-child]:lg:mx-auto">
           {partners.map((partner, index) => (
             <motion.div
               key={index}
