@@ -79,7 +79,7 @@ const TeamSection = () => {
                   <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
                     <Card className="border-none shadow-lg">
                       <CardContent className="flex flex-col items-center p-6">
-                        <div className="w-48 h-48 mb-4 overflow-hidden rounded-full">
+                        <div className="w-48 h-48 mb-4 overflow-hidden rounded-full relative">
                           <img
                             src={member.image}
                             alt={member.name}
@@ -94,10 +94,10 @@ const TeamSection = () => {
                 ))}
               </CarouselContent>
               <div className="hidden md:block">
-                <CarouselPrevious className="-left-4 h-12 w-12 rounded-full bg-[#1EAEDB] hover:bg-[#0FA0CE] text-white border-none">
+                <CarouselPrevious className="absolute top-1/2 -translate-y-1/2 left-0 h-12 w-12 rounded-full bg-[#1EAEDB] hover:bg-[#0FA0CE] text-white border-none">
                   <ArrowLeft className="h-6 w-6" />
                 </CarouselPrevious>
-                <CarouselNext className="-right-4 h-12 w-12 rounded-full bg-[#1EAEDB] hover:bg-[#0FA0CE] text-white border-none">
+                <CarouselNext className="absolute top-1/2 -translate-y-1/2 right-0 h-12 w-12 rounded-full bg-[#1EAEDB] hover:bg-[#0FA0CE] text-white border-none">
                   <ArrowRight className="h-6 w-6" />
                 </CarouselNext>
               </div>
