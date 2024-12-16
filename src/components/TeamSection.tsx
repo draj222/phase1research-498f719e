@@ -53,7 +53,7 @@ const TeamSection = () => {
       if (carouselApi.current) {
         carouselApi.current.scrollNext();
       }
-    }, 4000); // Changed from 6000 to 4000 ms
+    }, 4000);
   };
 
   useEffect(() => {
@@ -66,7 +66,7 @@ const TeamSection = () => {
   }, []);
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0 }}
@@ -80,11 +80,11 @@ const TeamSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-3xl md:text-4xl font-bold text-[#335c84] mb-4"
+            className="text-3xl md:text-4xl font-bold text-white mb-4"
           >
             Our Team
           </motion.h2>
-          <div className="w-20 h-1 bg-[#335c84] mx-auto mb-12"></div>
+          <div className="w-20 h-1 bg-white mx-auto mb-12"></div>
           
           <div className="max-w-5xl mx-auto relative">
             <Carousel
@@ -100,7 +100,7 @@ const TeamSection = () => {
               <CarouselContent>
                 {teamMembers.map((member, index) => (
                   <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                    <Card className="border-none shadow-lg">
+                    <Card className="border-none bg-white/10 backdrop-blur-sm shadow-lg">
                       <CardContent className="flex flex-col items-center p-6">
                         <div className="w-48 h-48 mb-4 overflow-hidden rounded-full relative">
                           <motion.img
@@ -112,18 +112,18 @@ const TeamSection = () => {
                             transition={{ duration: 0.5 }}
                           />
                         </div>
-                        <h3 className="text-xl font-semibold text-[#335c84] mb-2">{member.name}</h3>
-                        <p className="text-gray-600">{member.role}</p>
+                        <h3 className="text-xl font-semibold text-white mb-2">{member.name}</h3>
+                        <p className="text-white/80">{member.role}</p>
                       </CardContent>
                     </Card>
                   </CarouselItem>
                 ))}
               </CarouselContent>
               <div className="hidden md:block">
-                <CarouselPrevious className="absolute top-1/2 -translate-y-1/2 -left-20 h-16 w-16 rounded-full bg-white hover:bg-gray-100 text-black border-2 border-black shadow-lg">
+                <CarouselPrevious className="absolute top-1/2 -translate-y-1/2 -left-20 h-16 w-16 rounded-full bg-white/10 hover:bg-white/20 text-white border-2 border-white/50 shadow-lg">
                   <ArrowLeft className="h-10 w-10" />
                 </CarouselPrevious>
-                <CarouselNext className="absolute top-1/2 -translate-y-1/2 -right-20 h-16 w-16 rounded-full bg-white hover:bg-gray-100 text-black border-2 border-black shadow-lg">
+                <CarouselNext className="absolute top-1/2 -translate-y-1/2 -right-20 h-16 w-16 rounded-full bg-white/10 hover:bg-white/20 text-white border-2 border-white/50 shadow-lg">
                   <ArrowRight className="h-10 w-10" />
                 </CarouselNext>
               </div>

@@ -50,7 +50,7 @@ const Impact = () => {
   }, []);
 
   return (
-    <section className="min-h-[50vh] bg-white">
+    <section className="min-h-[50vh]">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0 }}
@@ -65,11 +65,11 @@ const Impact = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="text-3xl md:text-4xl font-bold text-[#335c84] mb-4"
+              className="text-3xl md:text-4xl font-bold text-white mb-4"
             >
               Our Impact
             </motion.h2>
-            <div className="w-20 h-1 bg-[#335c84] mx-auto"></div>
+            <div className="w-20 h-1 bg-white mx-auto"></div>
           </div>
           
           <div className="flex flex-wrap justify-center gap-8 max-w-7xl mx-auto">
@@ -80,13 +80,13 @@ const Impact = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="text-center p-6 rounded-lg bg-white shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 w-[200px]"
+                className="text-center p-6 rounded-lg bg-white/10 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 w-[200px]"
               >
-                <div className="text-4xl md:text-5xl font-bold text-[#335c84] mb-2">
+                <div className="text-4xl md:text-5xl font-bold text-white mb-2">
                   <Counter value={stat.number.replace('+', '')} />
                   {stat.number.includes('+') && '+'}
                 </div>
-                <div className="text-gray-600 font-medium">{stat.label}</div>
+                <div className="text-white/80 font-medium">{stat.label}</div>
               </motion.div>
             ))}
           </div>
