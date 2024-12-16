@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useEffect } from "react";
 import {
   Carousel,
   CarouselContent,
@@ -6,6 +7,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import useEmblaCarousel from "embla-carousel-react";
 
 const PastEvents = () => {
   const events = [
@@ -35,6 +37,18 @@ const PastEvents = () => {
     }
   ];
 
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
+
+  useEffect(() => {
+    if (emblaApi) {
+      const intervalId = setInterval(() => {
+        emblaApi.scrollNext();
+      }, 8000); // 8 seconds
+
+      return () => clearInterval(intervalId);
+    }
+  }, [emblaApi]);
+
   return (
     <section className="py-16 bg-[#233e5c]">
       <div className="container mx-auto px-4">
@@ -51,7 +65,10 @@ const PastEvents = () => {
         </motion.div>
 
         <div className="max-w-4xl mx-auto">
-          <Carousel className="relative">
+          <Carousel 
+            ref={emblaRef}
+            className="relative"
+          >
             <CarouselContent>
               {events.map((event, index) => (
                 <CarouselItem key={index}>
