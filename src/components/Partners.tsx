@@ -8,6 +8,9 @@ const Partners = () => {
     { logo: "/lovable-uploads/a237ba81-4d2c-482c-9d78-3e46a289bd09.png", name: "Republique du Mali" },
     { logo: "/lovable-uploads/a9519706-6ce4-4e24-9308-35b3d2f5310a.png", name: "NextGen Research Institute" },
     { logo: "/lovable-uploads/eb8f6e86-a590-4d59-a3b4-d22138c89a06.png", name: "Acecycle" },
+    { logo: "/lovable-uploads/08c692f6-4d1a-4a35-b177-606b45f6be72.png", name: "Stanford University" },
+    { logo: "/lovable-uploads/9d02bc7f-f09c-499b-9719-8b9ec74a2c55.png", name: "San Jose State University" },
+    { logo: "/lovable-uploads/57ca222c-004c-4566-8bcd-2e42c18f64ab.png", name: "UC Berkeley" },
   ];
 
   return (
