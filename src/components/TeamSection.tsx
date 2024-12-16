@@ -18,8 +18,8 @@ const teamMembers = [
   },
   {
     image: "/lovable-uploads/dd3dc8bb-2092-4674-9be1-38aae61ac94e.png",
-    name: "Team Member 2",
-    role: "Role to be added"
+    name: "Vedant Sagare",
+    role: "Co-Founder"
   },
   {
     image: "/lovable-uploads/3d7aa2ca-e2aa-4a1d-ba1a-888a7d084a5e.png",
