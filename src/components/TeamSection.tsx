@@ -41,7 +41,7 @@ const teamMembers = [
 
 const TeamSection = () => {
   const carouselApi = useRef<any>(null);
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(true); // Changed to true by default
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
   const startAutoPlay = () => {
@@ -51,7 +51,7 @@ const TeamSection = () => {
       if (carouselApi.current) {
         carouselApi.current.scrollNext();
       }
-    }, 3000); // Change slide every 3 seconds
+    }, 3000);
   };
 
   const stopAutoPlay = () => {
@@ -70,8 +70,9 @@ const TeamSection = () => {
     }
   };
 
-  // Cleanup on unmount
+  // Start autoplay when component mounts
   useEffect(() => {
+    startAutoPlay();
     return () => {
       if (intervalRef.current) {
         clearInterval(intervalRef.current);
@@ -154,7 +155,7 @@ const TeamSection = () => {
               ) : (
                 <>
                   <Play className="h-6 w-6" />
-                  Play Slideshow
+                  Play
                 </>
               )}
             </Button>
