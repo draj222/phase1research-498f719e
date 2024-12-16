@@ -12,7 +12,7 @@ const SupportSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-[#33C3F0]">Support Our Work</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-white">Support Our Work</h2>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
               variant="outline"

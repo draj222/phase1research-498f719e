@@ -29,11 +29,11 @@ const Programs = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-3xl md:text-4xl font-bold mb-4 text-[#33C3F0]"
+            className="text-3xl md:text-4xl font-bold mb-4 text-white"
           >
             Our Programs
           </motion.h2>
-          <p className="text-[#33C3F0]/80 max-w-2xl mx-auto">
+          <p className="text-white/80 max-w-2xl mx-auto">
             We provide comprehensive support through various programs designed to make quality education accessible to all.
           </p>
         </div>
@@ -50,8 +50,8 @@ const Programs = () => {
               <div className="mb-4 p-3 inline-block bg-[#33C3F0]/10 rounded-lg">
                 {program.icon}
               </div>
-              <h3 className="text-xl font-semibold mb-3 text-[#33C3F0]">{program.title}</h3>
-              <p className="text-[#33C3F0]/80">{program.description}</p>
+              <h3 className="text-xl font-semibold mb-3 text-white">{program.title}</h3>
+              <p className="text-white/80">{program.description}</p>
             </motion.div>
           ))}
         </div>

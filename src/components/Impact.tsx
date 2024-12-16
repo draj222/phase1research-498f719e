@@ -18,8 +18,8 @@ const Impact = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#33C3F0]">Our Impact</h2>
-          <p className="text-[#33C3F0]/80 max-w-2xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Our Impact</h2>
+          <p className="text-white/80 max-w-2xl mx-auto">
             Through our programs, we've made significant strides in bridging the educational gap globally.
           </p>
         </motion.div>
@@ -36,7 +36,7 @@ const Impact = () => {
               <div className="text-4xl md:text-5xl font-bold text-[#33C3F0] mb-2">
                 {stat.number}
               </div>
-              <div className="text-[#33C3F0]/80">{stat.label}</div>
+              <div className="text-white/80">{stat.label}</div>
             </motion.div>
           ))}
         </div>

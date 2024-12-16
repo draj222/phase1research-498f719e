@@ -13,10 +13,10 @@ const Hero = () => {
           <span className="inline-block px-4 py-1 mb-6 text-sm font-medium text-[#33C3F0] bg-[#33C3F0]/10 rounded-full">
             Empowering Through Education
           </span>
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-[#33C3F0]">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">
             Transforming Education Through Mentorship
           </h1>
-          <p className="text-lg md:text-xl text-[#33C3F0]/80 mb-8 max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-white/80 mb-8 max-w-2xl mx-auto">
             Connecting students with mentors from T20 universities and industry professionals to build essential research skills.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
