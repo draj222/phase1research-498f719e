@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Button } from "./ui/button";
 
 const Partners = () => {
   const partners = [
@@ -44,6 +45,21 @@ const Partners = () => {
             </motion.div>
           ))}
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mt-12"
+        >
+          <Button 
+            size="lg"
+            className="bg-white hover:bg-white/90 text-[#233e5c] font-semibold text-lg px-8 py-6"
+          >
+            Partner with us
+          </Button>
+        </motion.div>
       </div>
     </section>
   );
