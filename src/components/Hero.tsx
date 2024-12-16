@@ -10,7 +10,7 @@ const Hero = () => {
           transition={{ duration: 0.6 }}
           className="text-center max-w-4xl mx-auto"
         >
-          <span className="inline-block px-4 py-1 mb-6 text-sm font-medium text-[#33C3F0] bg-[#33C3F0]/10 rounded-full">
+          <span className="inline-block px-4 py-1 mb-6 text-sm font-medium text-[#335c84] bg-[#335c84]/10 rounded-full">
             Empowering Through Education
           </span>
           <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">
@@ -20,10 +20,10 @@ const Hero = () => {
             Connecting students with mentors from T20 universities and industry professionals to build essential research skills.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="px-8 py-3 bg-[#33C3F0] text-black rounded-lg shadow-lg hover:bg-[#33C3F0]/80 transition-all duration-300 transform hover:scale-105">
+            <button className="px-8 py-3 bg-[#335c84] text-black rounded-lg shadow-lg hover:bg-[#335c84]/80 transition-all duration-300 transform hover:scale-105">
               Find a Mentor
             </button>
-            <button className="px-8 py-3 bg-transparent text-[#33C3F0] border-2 border-[#33C3F0] rounded-lg hover:bg-[#33C3F0]/10 transition-all duration-300">
+            <button className="px-8 py-3 bg-transparent text-[#335c84] border-2 border-[#335c84] rounded-lg hover:bg-[#335c84]/10 transition-all duration-300">
               Become a Mentor
             </button>
           </div>

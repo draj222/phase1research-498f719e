@@ -16,19 +16,19 @@ const SupportSection = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
               variant="outline"
-              className="bg-transparent border-2 border-[#33C3F0] text-[#33C3F0] hover:bg-[#33C3F0] hover:text-black transition-all duration-300"
+              className="bg-transparent border-2 border-[#335c84] text-[#335c84] hover:bg-[#335c84] hover:text-black transition-all duration-300"
             >
               Donate Now
             </Button>
             <Button
               variant="outline"
-              className="bg-transparent border-2 border-[#33C3F0] text-[#33C3F0] hover:bg-[#33C3F0] hover:text-black transition-all duration-300"
+              className="bg-transparent border-2 border-[#335c84] text-[#335c84] hover:bg-[#335c84] hover:text-black transition-all duration-300"
             >
               Past Events
             </Button>
             <Button
               variant="outline"
-              className="bg-transparent border-2 border-[#33C3F0] text-[#33C3F0] hover:bg-[#33C3F0] hover:text-black transition-all duration-300"
+              className="bg-transparent border-2 border-[#335c84] text-[#335c84] hover:bg-[#335c84] hover:text-black transition-all duration-300"
             >
               Our Outcomes
             </Button>

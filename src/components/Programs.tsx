@@ -3,17 +3,17 @@ import { Laptop, Users, Wifi } from "lucide-react";
 
 const programs = [
   {
-    icon: <Users className="w-8 h-8 text-[#33C3F0]" />,
+    icon: <Users className="w-8 h-8 text-[#335c84]" />,
     title: "Mentorship Program",
     description: "Connect with mentors from top universities and industry professionals who guide you through research fundamentals.",
   },
   {
-    icon: <Laptop className="w-8 h-8 text-[#33C3F0]" />,
+    icon: <Laptop className="w-8 h-8 text-[#335c84]" />,
     title: "Technology Access",
     description: "Receive essential tools like laptops and equipment needed to pursue your educational goals.",
   },
   {
-    icon: <Wifi className="w-8 h-8 text-[#33C3F0]" />,
+    icon: <Wifi className="w-8 h-8 text-[#335c84]" />,
     title: "Internet Connectivity",
     description: "Get access to WiFi routers and internet connectivity to ensure continuous learning.",
   },
@@ -45,9 +45,9 @@ const Programs = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
-              className="p-6 rounded-xl bg-black border border-[#33C3F0]/20 shadow-sm hover:shadow-md transition-all duration-300"
+              className="p-6 rounded-xl bg-black border border-[#335c84]/20 shadow-sm hover:shadow-md transition-all duration-300"
             >
-              <div className="mb-4 p-3 inline-block bg-[#33C3F0]/10 rounded-lg">
+              <div className="mb-4 p-3 inline-block bg-[#335c84]/10 rounded-lg">
                 {program.icon}
               </div>
               <h3 className="text-xl font-semibold mb-3 text-white">{program.title}</h3>

@@ -33,7 +33,7 @@ const Impact = () => {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="text-center"
             >
-              <div className="text-4xl md:text-5xl font-bold text-[#33C3F0] mb-2">
+              <div className="text-4xl md:text-5xl font-bold text-[#335c84] mb-2">
                 {stat.number}
               </div>
               <div className="text-white/80">{stat.label}</div>
