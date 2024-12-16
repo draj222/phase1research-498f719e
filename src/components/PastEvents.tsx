@@ -27,11 +27,15 @@ const PastEvents = () => {
 
   useEffect(() => {
     if (emblaApi) {
+      console.log('Setting up carousel interval: 3000ms');
       const intervalId = setInterval(() => {
         emblaApi.scrollNext();
-      }, 3000); // Changed from 5000 to 3000 milliseconds
+      }, 3000);
 
-      return () => clearInterval(intervalId);
+      return () => {
+        console.log('Cleaning up carousel interval');
+        clearInterval(intervalId);
+      };
     }
   }, [emblaApi]);
 
