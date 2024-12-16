@@ -1,22 +1,6 @@
 import { motion } from "framer-motion";
-import { useState } from "react";
-import { Input } from "./ui/input";
-import { Button } from "./ui/button";
-import { toast } from "sonner";
 
 const Partners = () => {
-  const [organizationName, setOrganizationName] = useState("");
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (organizationName.trim()) {
-      toast.success("Organization name submitted successfully!");
-      setOrganizationName("");
-    } else {
-      toast.error("Please enter an organization name");
-    }
-  };
-
   const partners = [
     { logo: "/lovable-uploads/879c459a-b7ac-4db5-9ef5-53bfee99dc28.png", name: "Salesforce" },
     { logo: "/lovable-uploads/d70a6a4b-bfc4-49d4-8eeb-a74b696404f8.png", name: "Refillet" },
@@ -39,7 +23,7 @@ const Partners = () => {
           <div className="w-20 h-1 bg-white mx-auto"></div>
         </motion.div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 mb-12">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
           {partners.map((partner, index) => (
             <motion.div
               key={index}
@@ -49,7 +33,7 @@ const Partners = () => {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="flex flex-col items-center"
             >
-              <div className="bg-white p-4 rounded-lg w-full aspect-square flex items-center justify-center">
+              <div className="p-2 rounded-lg w-24 h-24 flex items-center justify-center">
                 <img
                   src={partner.logo}
                   alt={partner.name}
@@ -60,27 +44,6 @@ const Partners = () => {
             </motion.div>
           ))}
         </div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="max-w-md mx-auto"
-        >
-          <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-            <Input
-              type="text"
-              placeholder="Enter organization name"
-              value={organizationName}
-              onChange={(e) => setOrganizationName(e.target.value)}
-              className="bg-white"
-            />
-            <Button type="submit" className="bg-accent hover:bg-accent/90 text-white">
-              Submit Organization
-            </Button>
-          </form>
-        </motion.div>
       </div>
     </section>
   );
