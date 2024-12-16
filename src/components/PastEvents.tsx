@@ -13,7 +13,7 @@ const PastEvents = () => {
       title: "School Outreach Program - India",
       date: "December 15, 2023",
       image: "/lovable-uploads/48477bc8-e46b-455e-a94c-ebb64b9c42b3.png",
-      description: "Engaging with students at an under-resourced school in India, fostering educational opportunities and research awareness.",
+      description: "Engaging with students at an under-resourced school in India, where we donated over $2,500 in portable solar kits. Each student built their own kit equipped with a light and fan while learning about energy sustainability.",
     },
     {
       title: "Summer Research Workshop",
