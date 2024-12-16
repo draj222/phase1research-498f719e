@@ -10,10 +10,10 @@ import {
 const PastEvents = () => {
   const events = [
     {
-      title: "Research Symposium 2023",
+      title: "School Outreach Program - India",
       date: "December 15, 2023",
-      image: "/lovable-uploads/dd3dc8bb-2092-4674-9be1-38aae61ac94e.png",
-      description: "Annual gathering of student researchers presenting their findings across multiple disciplines.",
+      image: "/lovable-uploads/48477bc8-e46b-455e-a94c-ebb64b9c42b3.png",
+      description: "Engaging with students at an under-resourced school in India, fostering educational opportunities and research awareness.",
     },
     {
       title: "Summer Research Workshop",
