@@ -34,7 +34,7 @@ const teamMembers = [
   {
     image: "/lovable-uploads/cafd2c69-f081-4878-837e-6b6db0a661bd.png",
     name: "Jayden Solis",
-    role: "Director of Marketing"
+    role: "Co-Director of Marketing"
   },
   {
     image: "/lovable-uploads/39b25d33-3640-4482-95fd-307e50a57bda.png",
