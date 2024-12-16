@@ -82,7 +82,7 @@ const Impact = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="text-center p-6 rounded-lg bg-white/10 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 w-[200px]"
               >
-                <div className="text-4xl md:text-5xl font-bold text-white mb-2">
+                <div className="text-3xl md:text-4xl font-bold text-white mb-2">
                   <Counter value={stat.number.replace('+', '')} />
                   {stat.number.includes('+') && '+'}
                 </div>
