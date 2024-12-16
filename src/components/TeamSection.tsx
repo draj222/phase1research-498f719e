@@ -23,13 +23,13 @@ const teamMembers = [
   },
   {
     image: "/lovable-uploads/0a61d3e4-6533-4fda-8d60-53c58693e587.png",
-    name: "Team Member 3",
+    name: "Harsha Vajrala",
     role: "Co-Founder"
   },
   {
-    image: "/lovable-uploads/704ce3fc-4203-4b5a-a288-5c73ff5dd0e4.png",
-    name: "Team Member 4",
-    role: "Role to be added"
+    image: "/lovable-uploads/e23a78a1-08a1-4937-b94e-d9bd2301b5ff.png",
+    name: "Krishiv Jaini",
+    role: "Director of Outreach"
   },
   {
     image: "/lovable-uploads/01755bd0-f3e6-4f25-9e1e-cd89b20c26a4.png",
