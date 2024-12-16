@@ -22,6 +22,10 @@ const features = [
 ];
 
 const EnrollNow = () => {
+  const handleApplyClick = () => {
+    window.open("https://36xf3wlv9l6.typeform.com/to/JMhyVOqq", "_blank");
+  };
+
   return (
     <section className="py-20 bg-[#233e5c]">
       <div className="container mx-auto px-4">
@@ -66,6 +70,7 @@ const EnrollNow = () => {
         >
           <Button 
             size="lg"
+            onClick={handleApplyClick}
             className="bg-white text-[#233e5c] hover:bg-white/90 font-semibold text-lg px-8 py-6"
           >
             Apply Now
