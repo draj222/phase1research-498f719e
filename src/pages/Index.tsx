@@ -5,6 +5,7 @@ import BecomeMentor from "@/components/BecomeMentor";
 import SupportSection from "@/components/SupportSection";
 import TeamSection from "@/components/TeamSection";
 import StartChapter from "@/components/StartChapter";
+import Partners from "@/components/Partners";
 
 const Index = () => {
   return (
@@ -12,6 +13,7 @@ const Index = () => {
       <Hero />
       <Impact />
       <TeamSection />
+      <Partners />
       <EnrollNow />
       <BecomeMentor />
       <StartChapter />
