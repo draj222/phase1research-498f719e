@@ -32,9 +32,9 @@ const teamMembers = [
     role: "Director of Outreach"
   },
   {
-    image: "/lovable-uploads/01755bd0-f3e6-4f25-9e1e-cd89b20c26a4.png",
-    name: "Team Member 5",
-    role: "Role to be added"
+    image: "/lovable-uploads/cafd2c69-f081-4878-837e-6b6db0a661bd.png",
+    name: "Jayden Solis",
+    role: "Director of Marketing"
   }
 ];
 
@@ -48,10 +48,9 @@ const TeamSection = () => {
       if (carouselApi.current) {
         carouselApi.current.scrollNext();
       }
-    }, 3000);
+    }, 6000); // Changed from 3000 to 6000 ms
   };
 
-  // Start autoplay when component mounts
   useEffect(() => {
     startAutoPlay();
     return () => {
