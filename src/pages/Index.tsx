@@ -16,23 +16,23 @@ const Index = () => {
     <main className="min-h-screen pt-16">
       <Navbar />
       <Hero />
-      <div className="h-px bg-white/10 w-full" />
+      <div className="h-px bg-white/25 w-full" />
       <Impact />
-      <div className="h-px bg-white/10 w-full" />
+      <div className="h-px bg-white/25 w-full" />
       <TeamSection />
-      <div className="h-px bg-white/10 w-full" />
+      <div className="h-px bg-white/25 w-full" />
       <Partners />
-      <div className="h-px bg-white/10 w-full" />
+      <div className="h-px bg-white/25 w-full" />
       <Featured />
-      <div className="h-px bg-white/10 w-full" />
+      <div className="h-px bg-white/25 w-full" />
       <PastEvents />
-      <div className="h-px bg-white/10 w-full" />
+      <div className="h-px bg-white/25 w-full" />
       <EnrollNow />
-      <div className="h-px bg-white/10 w-full" />
+      <div className="h-px bg-white/25 w-full" />
       <BecomeMentor />
-      <div className="h-px bg-white/10 w-full" />
+      <div className="h-px bg-white/25 w-full" />
       <StartChapter />
-      <div className="h-px bg-white/10 w-full" />
+      <div className="h-px bg-white/25 w-full" />
       <ContactUs />
       <Footer />
     </main>
