@@ -5,17 +5,17 @@ import { GraduationCap, BookOpen, Users } from "lucide-react";
 
 const features = [
   {
-    icon: <GraduationCap className="w-8 h-8 text-[#335c84]" />,
+    icon: <GraduationCap className="w-8 h-8 text-white" />,
     title: "Expert Guidance",
     description: "Learn from experienced researchers and academics in your field of interest.",
   },
   {
-    icon: <BookOpen className="w-8 h-8 text-[#335c84]" />,
+    icon: <BookOpen className="w-8 h-8 text-white" />,
     title: "Research Skills",
     description: "Develop essential research methodologies and analytical thinking skills.",
   },
   {
-    icon: <Users className="w-8 h-8 text-[#335c84]" />,
+    icon: <Users className="w-8 h-8 text-white" />,
     title: "Networking",
     description: "Connect with like-minded peers and build valuable professional relationships.",
   },
