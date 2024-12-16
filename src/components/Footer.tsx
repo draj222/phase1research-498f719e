@@ -2,6 +2,12 @@ import { Instagram, Linkedin } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
+  const scrollToContact = (e: React.MouseEvent) => {
+    e.preventDefault();
+    const contactSection = document.getElementById('contact');
+    contactSection?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <footer className="bg-[#1a2d44] text-white py-8">
       <div className="container mx-auto px-4">
@@ -32,9 +38,13 @@ const Footer = () => {
           >
             Donate
           </a>
-          <Link to="/contact" className="hover:text-accent transition-colors">
+          <a
+            href="#contact"
+            onClick={scrollToContact}
+            className="hover:text-accent transition-colors"
+          >
             Contact Us
-          </Link>
+          </a>
         </div>
       </div>
     </footer>
