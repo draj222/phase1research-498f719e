@@ -7,7 +7,7 @@ const Featured = () => {
       title: "High School Founders of Phase 1 Research Redefine Global Education",
       source: "TechBullion",
       link: "https://techbullion.com/high-school-founders-of-phase-1-research-redefine-global-education/",
-      logo: "/lovable-uploads/37d32d2e-2339-4c36-b400-97fcbf920e4e.png"
+      logo: "/lovable-uploads/06fc84ba-6d7b-4365-bec8-3ffc5877a1f8.png"
     },
     {
       title: "High School Students Bring Educational Resources to Underdeveloped Countries",
