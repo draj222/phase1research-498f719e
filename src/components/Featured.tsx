@@ -4,6 +4,12 @@ import { ExternalLink } from "lucide-react";
 const Featured = () => {
   const features = [
     {
+      title: "High School Founders of Phase 1 Research Redefine Global Education",
+      source: "TechBullion",
+      link: "https://techbullion.com/high-school-founders-of-phase-1-research-redefine-global-education/",
+      logo: "/lovable-uploads/adc4d919-3fef-42f7-8231-8178cff164c5.png"
+    },
+    {
       title: "High School Students Bring Educational Resources to Underdeveloped Countries",
       source: "Independent News",
       link: "https://www.independentnews.com/news/dublin_news/high-school-students-bring-educational-resources-to-underdeveloped-countries/article_09869a26-44d4-11ef-a3ee-73d109318fee.html",
@@ -27,11 +33,11 @@ const Featured = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">As Featured On</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">As Featured In</h2>
           <div className="w-20 h-1 bg-white mx-auto"></div>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {features.map((feature, index) => (
             <motion.div
               key={index}
