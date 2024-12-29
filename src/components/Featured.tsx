@@ -19,7 +19,7 @@ const Featured = () => {
       title: "Opinion: The Power of Youth Research - Phase 1's Mission to Revolutionize Education",
       source: "HS Insider - LA Times",
       link: "https://highschool.latimes.com/https-dhs-dublinusd-org/opinion-the-power-of-youth-research-phase-1s-mission-to-revolutionize-education/",
-      logo: "/lovable-uploads/c3b60c50-b1e5-471e-a33f-297964c172f0.png"
+      logo: "/lovable-uploads/d71bb0b2-587f-4ae8-93fb-50535f84cccd.png"
     }
   ];
 
